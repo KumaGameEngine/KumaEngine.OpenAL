@@ -1,0 +1,1 @@
+ClangSharpPInvokeGenerator -f ./OpenALSoft/include/AL/al.h -n "KumaEngine.OpenAL.Native" -l "openal" -m "ALNative" -o "./Source/Native/OpenALNative.cs" --generate macro-bindings --generate helper-types

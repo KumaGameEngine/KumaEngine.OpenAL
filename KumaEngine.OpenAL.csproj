@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>KumaEngine.OpenAL</Title>
+    <Description>OpenAL bindings for the Kuma game engine</Description>
+    <PackageProjectUrl>https://github.com/KumaGameEngine/KumaEngine.OpenAL</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KumaGameEngine/KumaEngine.OpenAL</RepositoryUrl>
+    <PackageLicenseExpression>MIT AND LGPL-2.0-or-later</PackageLicenseExpression>
+    <Copyright>Code: MIT; Native Binaries: LGPL v2+</Copyright>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClangSharp.Interop" Version="21.1.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source\Native\" />
+  
+	<None Update="runtimes\win-x64\native\openal.dll">
+      <Pack>True</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\win-x64\native\openal.dll</PackagePath>
+    </None>
+  <None Update="runtimes\linux-x64\native\libopenal.so">
+      <Pack>True</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackagePath>runtimes\linux-x64\native\libopenal.so</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
