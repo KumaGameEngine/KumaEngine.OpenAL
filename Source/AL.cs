@@ -197,7 +197,7 @@ namespace KumaEngine.OpenAL
         }
 
         public static ALSourceState GetSourceState(uint source)
-            => (ALSourceState)GetSourceInteger(source, ALSourceInteger.Buffer);
+            => (ALSourceState)GetSourceInteger(source, ALSourceInteger.State);
 
         #region Source Controls
 

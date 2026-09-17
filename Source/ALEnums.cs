@@ -97,6 +97,7 @@ namespace KumaEngine.OpenAL.Source
     public enum ALSourceInteger
     {
         Buffer = ALNative.AL_BUFFER,
+        State = ALNative.AL_SOURCE_STATE,
         SourceRelative = ALNative.AL_SOURCE_RELATIVE,
         Looping = ALNative.AL_LOOPING,
         BuffersQueued = ALNative.AL_BUFFERS_QUEUED,
@@ -128,5 +129,13 @@ namespace KumaEngine.OpenAL.Source
         Bits = ALNative.AL_BITS,
         Channels = ALNative.AL_CHANNELS,
         Size = ALNative.AL_SIZE
+    }
+
+    public enum ALContextAttribute
+    {
+        Frequency = ALNative.ALC_FREQUENCY,
+        Refresh = ALNative.ALC_REFRESH,
+        Sync = ALNative.ALC_SYNC,
+        MonoSources = ALNative.ALC_MONO_SOURCES,
     }
 }
